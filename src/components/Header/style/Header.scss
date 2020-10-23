@@ -1,0 +1,41 @@
+@import '../../../mixins/mixins.scss';
+
+.header {
+	position: fixed;
+	width: 100%;
+	background-color: transparent;
+	height: 3em;
+	.header__navigation {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 0 1rem;
+		.header__logo {
+			margin-left: 0.5rem;
+			a {
+				color: #000000;
+				text-decoration: none;
+				font-size: 2rem;
+			}
+		}
+		.header__navigationItems {
+			margin-left: auto;
+			ul {
+				list-style: none;
+				@include zeroMarginPadding;
+				display: flex;
+				li {
+					padding: 0 0.5rem;
+					a {
+						color: #000000;
+						text-decoration: none;
+						&:hover,
+						&:active {
+							color: #ff0000;
+						}
+					}
+				}
+			}
+		}
+	}
+}
